@@ -80,6 +80,9 @@ We implemented several baseline models to classify the SMS messages, including:
 12. **Gradient Boosting Classifier (GBDT)**
 13. **XGBoost Classifier (XGB)**
 
+<img src="baseline_models.png" alt="Stopwords" width="1500" height="450" />
+
+
 After evaluating the models, we applied voting and stacking methods to identify the best model for further experimentation.
 
 ## 5. Deep Learning Approaches for Classifying SMS Data
