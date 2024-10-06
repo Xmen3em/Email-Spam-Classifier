@@ -90,6 +90,10 @@ After evaluating the models, we applied voting and stacking methods to identify 
 - **LSTM Model**
 - **Universal Sentence Encoder (USE)**
 
+<img src="lstm_acc.png" alt="Stopwords" width="1500" height="450" />
+
+<img src="USE_acc.png" alt="Stopwords" width="1500" height="450" />
+
 ## 6. Model Deployment
 
 The Multinomial Naive Bayes model, which yielded the highest accuracy, is used for production. A simple web application was developed using Streamlit to enable users to classify messages as spam or not in real time.
