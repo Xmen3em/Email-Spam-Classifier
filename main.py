@@ -23,8 +23,9 @@ def text_process(mess):
     Returns a cleaned string of text
     """
     text = str(mess).lower()
-    text = re.sub('\[.*?\]', '', text)
-    text = re.sub('https?://\S+|www\.\S+', '', text)
+    text = re.sub(r'\[.*?\]', '', text)  # Remove text inside square brackets
+
+    text = re.sub(r'https?://\S+|www\.\S+', '', text)  
     text = re.sub('<.*?>+', '', text)
     
     STOPWORDS = stopwords.words('english') + ['u', 'ü', 'ur', '4', '2', 'im', 'dont', 'doin', 'ure']
@@ -33,7 +34,7 @@ def text_process(mess):
     nopunc = ''.join([char for char in text if char not in string.punctuation])
     
     # Remove words containing numbers
-    text = re.sub('\w*\d\w*', '', nopunc)
+    text = re.sub(r'\w*\d\w*', '', nopunc)
     
     # Remove stopwords
     return ' '.join([word for word in text.split() if word.lower() not in STOPWORDS])
